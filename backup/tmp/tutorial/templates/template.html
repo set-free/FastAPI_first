@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Form</title>
+    <link rel="stylesheet" href="./static/css/vendor/bootstrap.min.css"> <!-- Подключаем Bootstrap CSS -->
+</head>
+
+
+<script src="./static/js/vendor/jquery-3.5.1.min.js"></script> <!-- Подключаем jQuery -->
+<script src="./static/js/vendor/bootstrap.bundle.min.js"></script> <!-- Подключаем Bootstrap JS -->
+
+
+
+<!-- После подключения jQuery, Popper и Bootstrap JS -->
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover({trigger:'hover'});
+    });
+</script>
+
+<!--JS: вывод всей информации о странице в консоль разработчика-->
+<!--<script> console.dir(document) </script>-->
+<!--фыв-->
+<!--<script> document.querySelector() </script>-->
+
+<!--<script src="JS/main.js"> </script>-->
+
+
+<body>
+<form id="first" action="/form/1" method="post">
+    <input type="text" name="username" value="Ivan"/> <br>
+    <input type="text" name="password" value="qwerty"/> <br>
+    <input type="number" name="num" value="{{ num }}"/> <br>
+    <input type="checkbox" name="OS1" value="Linux"/> Linux<br>
+    <input type="checkbox" name="OS2" value="Windows"/> Windows<br>
+<!--    <input type="submit" >-->
+    <button type="submit" class="btn btn-primary" data-toggle="popover"
+  title="Сообщение" data-content="Отправить данные">
+    Отправить
+</button>
+
+</form>
+
+
+<form id="second" method="post" action="/form/1">
+    <label for="username">First name:</label>
+    <input type="text" id="username" name="username" value="Ivan"><br><br>
+    <label for="password">Last name:</label>
+    <input type="text" id="password" name="password" value="qwerty"><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+<!--    console.dir(document)-->
+<!--    document.querySelector()-->
+
+<!--    Находим форму на стрнице-->
+    const myVar = document.querySelector('#first')
+    console.log(myVar)
+
+<!--    отследить форму отправки-->
+    myVar.addEventListener('submit', function()){
+        console.log('SUBMIT!')
+    }
+</script>
+
+<!--<p>Result: {{ result }}</p>-->
+
+<!-- <button type="button" onclick="document.write(5 + 6)">Try it</button>-->
+</body>
+</html>

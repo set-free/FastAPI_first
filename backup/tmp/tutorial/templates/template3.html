@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Form</title>
+    <link rel="shortcut icon" href="./static/favicon.ico" type="image/x-icon" />
+</head>
+
+<!--JS: вывод всей информации о странице в консоль разработчика-->
+<!--<script> console.dir(document) </script>-->
+<!--фыв-->
+<!--<script> document.querySelector() </script>-->
+
+<script src="./static/js/main.js"> </script>
+
+
+
+
+<body>
+<form id="first" method="post">
+    <input type="text" id="username" name="username" value=""/> <br>
+    <input type="text" id="password" name="password" value=""/> <br>
+    <input type="number" id="num" name="num" value="{{ num }}"/> <br>
+    <input type="checkbox" name="OS1" value="Linux"/> Linux<br>
+    <input type="checkbox" name="OS2" value="Windows"/> Windows<br>
+    <input type="submit">
+</form>
+
+
+<!--<script>-->
+<!--    const myVar1 = document.querySelector('#first');-->
+<!--    const myVar2 = document.querySelector('#sec');-->
+<!--    const Inputs = myVar1.value;-->
+<!--&lt;!&ndash;    console.log(myVar1);&ndash;&gt;-->
+
+<!--    myVar1.addEventListener('submit', function(event){-->
+<!--        event.preventDefault();-->
+<!--        const username = document.querySelector('#username');-->
+<!--        const password = document.querySelector('#password');-->
+<!--        const num = document.querySelector('#num').value;-->
+<!--        console.log(username.value);-->
+<!--        console.log(password.value);-->
+<!--        console.log(num);-->
+<!--    })-->
+
+<!--    const taskHTML = `-->
+<!--            <input type="text" id="username" name="username" value="${username}"/> <br>-->
+<!--            <input type="text" id="password" name="password" value="${password}"/> <br>-->
+<!--    `;-->
+<!--    console.log(taskHTML);-->
+
+<!--    myVar2.insertAdjacentHTML('afterbegin', taskHTML);-->
+
+<!--&lt;!&ndash;    myVar1 = '';&ndash;&gt;-->
+
+<!--</script>-->
+
+
+
+
+
+
+<!--<script>-->
+<!--&lt;!&ndash;    console.dir(document)&ndash;&gt;-->
+<!--&lt;!&ndash;    document.querySelector()&ndash;&gt;-->
+
+<!--&lt;!&ndash;    Находим форму на стрнице&ndash;&gt;-->
+<!--    const myVar = document.querySelector('#first');-->
+<!--    console.log(myVar);-->
+
+<!--&lt;!&ndash;    отследить форму отправки&ndash;&gt;-->
+<!--&lt;!&ndash;    myVar.addEventListener('submit', function(){&ndash;&gt;-->
+<!--&lt;!&ndash;        console.log('SUBMIT!');&ndash;&gt;-->
+<!--&lt;!&ndash;    })&ndash;&gt;-->
+
+<!--&lt;!&ndash;    отмена стандартного поведения (обновить страницу)&ndash;&gt;-->
+<!--        myVar.addEventListener('submit', function(event){-->
+<!--        console.log(event);-->
+<!--        event.preventDefault();-->
+<!--        console.log('SUBMIT!');-->
+<!--    })-->
+<!--</script>-->
+
+</body>
+</html>

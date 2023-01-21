@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Form</title>
+</head>
+<body>
+
+<p>name={{ username }}</p>
+<p>name={{ password }}</p>
+
+<br>Return <form method="post" action="/form/">  <input type="submit"/> </form>
+
+<form method="post">
+    <input type="text" name="username" value="{{ username }}"/> <br>
+    <input type="text" name="password" value="{{ password }}"/> <br>
+    <input type="submit"/>
+</form>
+</body>
+</html>
+
+<!--type - определяет внешний вид и функционал-->
+<!--name - имя с которым данный элемент попадет в запрос-->
+<!--value - начальное знаечение, пользователь может изменить-->
+<!--placeholder - подсказка для пользователя-->

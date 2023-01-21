@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "test"
+version = "0.1.0"
+description = ""
+authors = ["Ivan Savelyev <s.i.v.892@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.89.1"
+uvicorn = {extras = ["standard"], version = "^0.20.0"}
+gunicorn = "^20.1.0"
+
+#[tool.poetry.dev-dependencies]
+#pytest = "^6.2"
+
+[tool.poetry.group.dev.dependencies]
+jinja2 = "^3.1.2"
+python-multipart = "^0.0.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+#run-main = "new_proj.main:main_def"
+#run-main = "gunicorn -b 0.0.0.0:8080 wsgi"
